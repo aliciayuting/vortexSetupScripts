@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Check if the OPT_HOME environment variable is set
+# Check if the SPDLOG_PREFIX environment variable is set
 if [ -z "$SPDLOG_PREFIX" ]; then
     echo "Error: SPDLOG installation environment variable is not set. Please set it via running the env_setup.sh script and try again."
     exit 1

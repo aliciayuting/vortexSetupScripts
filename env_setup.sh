@@ -10,6 +10,7 @@ fi
 # Set OPT_HOME to the first argument
 OPT_HOME="$1"
 
+export CMAKE_INSTALL_PREFIX=${OPT_HOME}
 export CASCADE_INSTALL_PREFIX=${OPT_HOME}
 export DERECHO_INSTALL_PREFIX=${OPT_HOME}
 export VORTEX_INSTALL_PREFIX=${OPT_HOME}
@@ -21,12 +22,12 @@ export CMAKE_PREFIX_PATH=${OPT_HOME}/
 export C_INCLUDE_PATH=${OPT_HOME}/include/
 export CPLUS_INCLUDE_PATH=${OPT_HOME}/include/
 export LIBRARY_PATH=${OPT_HOME}/lib/
-export LD_LIBRARY_PATH=${OPT_HOME}/lib/
+export LD_LIBRARY_PATH=${OPT_HOME}/lib/:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 export CUDAToolKitRoot=/usr/local/cuda-12.3
 export PYTHONPATH=$PYTHONPATH:${OPT_HOME}/lib/
 export PYTHONPATH=$PYTHONPATH:${OPT_HOME}/bin/
-export PATH=$PATH:${OPT_HOME}/bin
+export PATH=${OPT_HOME}/bin/${PATH}
 export PATH=$PATH:/home/yy354/.local/bin
 export PATH=/usr/local/cuda/bin:$PATH
 
