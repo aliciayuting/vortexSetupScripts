@@ -2,7 +2,7 @@
 
 # Check if the OPT_HOME argument is provided
 if [ -z "$1" ]; then
-    echo "your OPT_HOME directory not provided. Please provide it as the first argument."
+    echo "your USER_HOME directory not provided. Please provide it as the first argument."
     echo "you can run this script as $./env_setup.sh /home/[yournetid] or $./env_setup.sh ~"
     exit 1
 fi
