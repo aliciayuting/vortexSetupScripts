@@ -30,9 +30,9 @@ export CUDAToolKitRoot=/usr/local/cuda-12.3
 export CUDAToolkit_DIR=/usr/local/cuda-12.3
 export PYTHONPATH=$PYTHONPATH:${OPT_HOME}/lib/
 export PYTHONPATH=$PYTHONPATH:${OPT_HOME}/bin/
-export PATH=${OPT_HOME}/bin/:${PATH}
-export PATH=${USER_HOME}/.local/bin:${PATH}
-export PATH=/usr/local/cuda/bin:${PATH}
+export PATH=$PATH:${OPT_HOME}/bin
+export PATH=$PATH:${USER_HOME}/.local/bin
+export PATH=/usr/local/cuda/bin:$PATH
 
 echo "Environment variables have been set with OPT_HOME: $OPT_HOME"
 
