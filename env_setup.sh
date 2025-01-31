@@ -8,7 +8,7 @@ if [ -z "$1" ]; then
 fi
 
 # Set OPT_HOME to the first argument
-USER_HOME="$1"
+USER_HOME=$(echo "$1" | sed 's:/*$::')
 OPT_HOME=${USER_HOME}/opt_dev
 
 export CMAKE_INSTALL_PREFIX=${OPT_HOME}
@@ -29,9 +29,9 @@ export CUDAToolKitRoot=/usr/local/cuda-12.3
 export CUDAToolkit_DIR=/usr/local/cuda-12.3
 export PYTHONPATH=$PYTHONPATH:${OPT_HOME}/lib/
 export PYTHONPATH=$PYTHONPATH:${OPT_HOME}/bin/
-export PATH=/usr/local/cuda/bin:${PATH}
 export PATH=${OPT_HOME}/bin/:${PATH}
 export PATH=${USER_HOME}/.local/bin:${PATH}
+export PATH=/usr/local/cuda/bin:${PATH}
 
 echo "Environment variables have been set with OPT_HOME: $OPT_HOME"
 
