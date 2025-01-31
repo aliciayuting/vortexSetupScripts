@@ -27,7 +27,6 @@ export LIBRARY_PATH=${OPT_HOME}/lib/
 export LD_LIBRARY_PATH=${OPT_HOME}/lib/:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 export CUDAToolKitRoot=/usr/local/cuda-12.3
-export CUDAToolkit_DIR=/usr/local/cuda-12.3
 export PYTHONPATH=$PYTHONPATH:${OPT_HOME}/lib/
 export PYTHONPATH=$PYTHONPATH:${OPT_HOME}/bin/
 export PATH=$PATH:${OPT_HOME}/bin
