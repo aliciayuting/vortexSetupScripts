@@ -9,7 +9,7 @@ fi
 
 # Set OPT_HOME to the first argument
 USER_HOME=$(echo "$1" | sed 's:/*$::')
-OPT_HOME=${USER_HOME}/opt_dev
+OPT_HOME=${USER_HOME}/opt-dev
 
 export CMAKE_INSTALL_PREFIX=${USER_HOME}/.local
 export CASCADE_INSTALL_PREFIX=${OPT_HOME}
