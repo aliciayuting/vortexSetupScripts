@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install CMake version 3.15.4
-# Check if the CMAKE_INSTALL_PREFIX environment variable is set
+# Check if the CMAKE_INSTALL_PREFIX environment variable is set to ~/.local/bin
 if [ -z "$CMAKE_INSTALL_PREFIX" ]; then
     echo "Error: CMake installation environment variable is not set. Please set it via running the env_setup.sh script and try again."
     exit 1
