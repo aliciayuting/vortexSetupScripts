@@ -3,12 +3,13 @@
 # Check if the OPT_HOME argument is provided
 if [ -z "$1" ]; then
     echo "your OPT_HOME directory not provided. Please provide it as the first argument."
-    echo "you can run this script as $./env_setup.sh /home/[yournetid]/opt-dev or $./env_setup.sh ~/opt-dev"
+    echo "you can run this script as $./env_setup.sh /home/[yournetid] or $./env_setup.sh ~"
     exit 1
 fi
 
 # Set OPT_HOME to the first argument
-OPT_HOME="$1"
+USER_HOME="$1"
+OPT_HOME=${USER_HOME}/opt_dev
 
 export CMAKE_INSTALL_PREFIX=${OPT_HOME}
 export CASCADE_INSTALL_PREFIX=${OPT_HOME}
@@ -27,8 +28,8 @@ export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 export CUDAToolKitRoot=/usr/local/cuda-12.3
 export PYTHONPATH=$PYTHONPATH:${OPT_HOME}/lib/
 export PYTHONPATH=$PYTHONPATH:${OPT_HOME}/bin/
-export PATH=${OPT_HOME}/bin/${PATH}
-export PATH=$PATH:/home/yy354/.local/bin
+export PATH=${OPT_HOME}/bin/:${PATH}
+export PATH=${USER_HOME}/.local/bin:$PATH
 export PATH=/usr/local/cuda/bin:$PATH
 
 echo "Environment variables have been set with OPT_HOME: $OPT_HOME"
