@@ -8,9 +8,8 @@ if [ -z "$CMAKE_INSTALL_PREFIX" ]; then
 fi
 
 # Clone the cmake repository and check out the specified version
-
-wget https://github.com/Kitware/CMake/releases/download/v3.15.4/cmake-3.15.4.tar.gz
-tar -xvzf cmake-3.15.4.tar.gz
+wget https://github.com/Kitware/CMake/releases/download/v3.31.0/cmake-3.31.0.tar.gz
+tar -xvzf cmake-3.31.4.tar.gz
 
 cd cmake-3.15.4
 ./bootstrap --prefix=$CMAKE_INSTALL_PREFIX
