@@ -11,7 +11,7 @@ fi
 # Boost version details
 BOOST_VERSION="1_74_0"
 BOOST_TAR="boost_${BOOST_VERSION}.tar.gz"
-BOOST_URL="https://boostorg.jfrog.io/artifactory/main/release/1.74.0/source/${BOOST_TAR}"
+BOOST_URL="https://archives.boost.io/release/1.74.0/source/boost_1_74_0.tar.gz"
 BOOST_DIR="boost_${BOOST_VERSION}"
 
 # Download and extract Boost
