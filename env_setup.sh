@@ -11,6 +11,15 @@ fi
 USER_HOME=$(echo "$1" | sed 's:/*$::')
 OPT_HOME=${USER_HOME}/opt-dev
 
+# Create opt-dev directory if it does not exist
+if [ ! -d "$OPT_HOME" ]; then
+    echo "Creating $OPT_HOME directory..."
+    mkdir -p "$OPT_HOME"
+    echo "Directory created: $OPT_HOME"
+else
+    echo "$OPT_HOME already exists. Skipping creation."
+fi
+
 export CMAKE_INSTALL_PREFIX=${USER_HOME}/.local
 export CASCADE_INSTALL_PREFIX=${OPT_HOME}
 export DERECHO_INSTALL_PREFIX=${OPT_HOME}
