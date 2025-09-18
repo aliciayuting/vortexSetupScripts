@@ -4,7 +4,7 @@
 # Check if the CMAKE_INSTALL_PREFIX environment variable is set to ~/.local/bin
 if [ -z "$CMAKE_INSTALL_PREFIX" ]; then
     echo "Error: CMake installation environment variable is not set. Please set it via running the env_setup.sh script and try again."
-    exit 1
+    return 1
 fi
 
 # Clone the cmake repository and check out the specified version
