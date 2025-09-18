@@ -4,7 +4,7 @@
 if [ -z "$1" ]; then
     echo "your USER_HOME directory not provided. Please provide it as the first argument."
     echo "you can run this script as $./env_setup.sh /home/[yournetid] or $./env_setup.sh ~"
-    exit 1
+    return 1
 fi
 
 # Set OPT_HOME to the first argument
