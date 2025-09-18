@@ -6,7 +6,7 @@ read -p "Please enter your base directory (e.g., /home/[yournetid]): " BASE_DIR
 # Validate if the input is not empty
 if [ -z "$BASE_DIR" ]; then
     echo "Base directory cannot be empty!"
-    exit 1
+    return 1
 fi
 
 echo "Cleaning up the built derecho and cascade under $BASE_DIR/opt-dev"
