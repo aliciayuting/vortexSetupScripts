@@ -42,5 +42,23 @@ export PATH=${USER_HOME}/.local/bin:$PATH
 export PATH=${OPT_HOME}/bin:$PATH
 export PATH=/usr/local/cuda/bin:$PATH
 
+
+# if [ ! -d "/mydata/.huggingface_cache" ]; then
+#     sudo mkdir "/mydata/.huggingface_cache"
+#     echo "Folder created for huggingface cache."
+# fi
+# export HF_HOME=/mydata/.huggingface_cache
+# echo "set HF_HOME to /mydata/.huggingface_cache"
+
+# # Retrieve the primary group dynamically
+# MYGROUP=$(id -gn)
+
+# # Change ownership using the dynamically obtained group name
+# sudo chown -R $USER:$MYGROUP /mydata/.huggingface_cache
+# echo "added ${USER}:${MYGROUP} to /mydata/.huggingface_cache"
+
+# echo "run this script again after install FLMR"
+# export PYTHONPATH=~/workspace/FLMR:$PYTHONPATH
+
 echo "Environment variables have been set with OPT_HOME: $OPT_HOME"
 
