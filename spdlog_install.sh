@@ -3,7 +3,7 @@
 # Check if the SPDLOG_PREFIX environment variable is set
 if [ -z "$SPDLOG_PREFIX" ]; then
     echo "Error: SPDLOG installation environment variable is not set. Please set it via running the env_setup.sh script and try again."
-    return 1
+    exit 1
 fi
 
 # Clone the spdlog repository and check out the specified version
