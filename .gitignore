@@ -1,4 +1,4 @@
-*/spdlog/
+*spdlog/
 *.pickle
 *.tar
 *.tar.*
