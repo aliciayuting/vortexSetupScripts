@@ -12,7 +12,9 @@
 # pip install --user nemo_toolkit['all'] 
 
 # # Install requirements to user space
-# pip install --user -r requirements.txt
+pip install --user -r ppl1_requirements.txt
+# pip install --user -r ppl2_requirements.txt
+
 
 echo "finished pip installation"
 

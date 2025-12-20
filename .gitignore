@@ -1,0 +1,44 @@
+*/spdlog/
+*.pickle
+*.tar
+*.tar.*
+*.zip
+
+# Ignore dataset for vector database
+**/gist/
+**/miniset/
+**/hotpot15/
+
+# Ignore VS Code settings and extensions
+.vscode/
+*.code-workspace
+
+# Ignore VS Code debugging and testing files
+.vscode-test/
+.vscode-oss-dev/
+
+# build folder
+build-*
+
+# ignore prebuilt hnsw indicies 
+*.bin
+
+# ignore py cache
+*__pycache__*
+
+# ignore indeces
+*/indexes/*
+
+#ignore model checkpoints
+*.pt
+
+# ignore data input for pipeline1
+*.parquet
+*.jpg
+*.arrow
+*inat/*
+*google-landmark/*
+
+
+FLMR
+scripts/faiss
