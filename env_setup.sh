@@ -42,20 +42,25 @@ export PATH=${USER_HOME}/.local/bin:$PATH
 export PATH=${OPT_HOME}/bin:$PATH
 export PATH=/usr/local/cuda/bin:$PATH
 
-# Fractus location of compute28
-if [ ! -d "/mnt/vortex/models/.huggingface_cache" ]; then
-    sudo mkdir "/mnt/vortex/models/.huggingface_cache"
-    echo "Folder created for huggingface cache."
-fi
+
+# # Fractus location of huggingface cache and models
+# sudo mkdir -p /mnt/vortex/models/.huggingface_cache
+# # Create a group named vortex if it doesn't exist
+# MYGROUP=vortex
+# getent group "$MYGROUP" >/dev/null || sudo groupadd "$MYGROUP"
+# # Add users to the shared group
+# sudo usermod -aG "$MYGROUP" yy354
+# sudo usermod -aG "$MYGROUP" az275
+# # Set group ownership and permissions (setgid so new files inherit group)
+# sudo chgrp -R "$MYGROUP" /mnt/vortex/models/.huggingface_cache
+# sudo chmod -R 2775 /mnt/vortex/models/.huggingface_cache
+# # Optional: ensure group write on existing files
+# sudo chmod -R g+rwX /mnt/vortex/models/.huggingface_cache
+# echo "Shared Hugging Face cache ready for group: $MYGROUP"
+
 export HF_HOME=/mnt/vortex/models/.huggingface_cache
 echo "set HF_HOME to /mnt/vortex/models/.huggingface_cache"
 
-# Retrieve the primary group dynamically
-MYGROUP=$(id -gn)
-
-# Change ownership using the dynamically obtained group name
-sudo chown -R $USER:$MYGROUP /mnt/vortex/models/.huggingface_cache
-echo "added ${USER}:${MYGROUP} to /mnt/vortex/models/.huggingface_cache"
 
 echo "run this script again after install FLMR"
 export PYTHONPATH=~/workspace/FLMR:$PYTHONPATH
