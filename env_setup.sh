@@ -42,6 +42,8 @@ export PATH=${USER_HOME}/.local/bin:$PATH
 export PATH=${OPT_HOME}/bin:$PATH
 export PATH=/usr/local/cuda/bin:$PATH
 
+# After installing pybind via pip install --user pybind11
+export pybind11_DIR=${USER_HOME}/.local/lib/python3.10/site-packages/pybind11/share/cmake/pybind11
 
 # # Fractus location of huggingface cache and models
 # sudo mkdir -p /mnt/vortex/models/.huggingface_cache
