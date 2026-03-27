@@ -45,6 +45,10 @@ export PATH=/usr/local/cuda/bin:$PATH
 # After installing pybind via pip install --user pybind11
 export pybind11_DIR=${USER_HOME}/.local/lib/python3.10/site-packages/pybind11/share/cmake/pybind11
 
+# To fix the UDL numpy import issue
+export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libpython3.10.so
+export PYTHONPATH=${USER_HOME}/.local/lib/python3.10/site-packages/:$PYTHONPATH
+
 # # Fractus location of huggingface cache and models
 # sudo mkdir -p /mnt/vortex/models/.huggingface_cache
 # # Create a group named vortex if it doesn't exist
